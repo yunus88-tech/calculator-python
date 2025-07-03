@@ -1,0 +1,25 @@
+def calculator():
+    print("Mini-Taschenrechner")
+    while True:
+        op = input("Operator (+, -, *, / or q to quit): ")
+        if op == "q":
+            break
+        try:
+            a = float(input("Erste Zahl: "))
+            b = float(input("Zweite Zahl: "))
+            if op == "+":
+                print("Ergebnis:", a + b)
+            elif op == "-":
+                print("Ergebnis:", a - b)
+            elif op == "*":
+                print("Ergebnis:", a * b)
+            elif op == "/":
+                print("Ergebnis:", a / b)
+            else:
+                print("Ungültiger Operator")
+        except ValueError:
+            print("Bitte gültige Zahlen eingeben.")
+        except ZeroDivisionError:
+            print("Durch 0 teilen ist nicht erlaubt.")
+
+calculator()
